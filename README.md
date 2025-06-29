@@ -27,7 +27,7 @@ State file :
 - All the other team memebers will pull the latest state from the blob storage and make changes to maintain collaboration and versioning. 
 
 
-![alt text](image.png)
+![alt text](media/terraform_architecture.png)
 
 ---
 
