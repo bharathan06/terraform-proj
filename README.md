@@ -1,5 +1,4 @@
 # terraform
-Proof of work for terraform  
 
 Description : 
 This is a small passion project to explore the tool : Terraform
