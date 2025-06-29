@@ -20,7 +20,24 @@ resource "azurerm_subnet" "private" {
   resource_group_name  = var.resource_group
   virtual_network_name = azurerm_virtual_network.this.name
   address_prefixes     = [var.private_subnet_cidr]
+
+  # Enable the PostgreSQL service endpoint
+  service_endpoints = [
+    "Microsoft.DBforPostgreSQL/flexibleServers"
+  ]
+
+  # Delegate the subnet to the server
+  delegation {
+    name = "${var.tags["env"]}-db-delegation"
+    service_delegation {
+      name    = "Microsoft.DBforPostgreSQL/flexibleServers"
+      actions = [
+        "Microsoft.Network/virtualNetworks/subnets/join/action"
+      ]
+    }
+  }
 }
+
 
 resource "azurerm_network_security_group" "public" {
   name                = "${var.tags["env"]}-public-nsg"
