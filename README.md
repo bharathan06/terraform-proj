@@ -1,6 +1,8 @@
 # terraform
 Proof of work for terraform  
-![alt text](image.png)
+
+![alt text](media/image.png)
+
 ---
 
 Initializing the terraform backend : 
