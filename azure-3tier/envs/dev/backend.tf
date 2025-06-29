@@ -1,3 +1,5 @@
+//Terraform configuration file for the dev environment
+
 terraform {
   backend "azurerm" {
     resource_group_name  = "rg-tfstate"
