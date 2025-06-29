@@ -1,26 +1,6 @@
 # terraform
 Proof of work for terraform  
-
-tf-azure-3tier/
-├─ modules/
-│  ├─ network/
-│  │   ├─ main.tf
-│  │   ├─ variables.tf
-│  │   └─ outputs.tf
-│  ├─ compute/
-│  └─ database/
-├─ envs/
-│  └─ dev/
-│      ├─ backend.tf
-│      ├─ versions.tf
-│      ├─ provider.tf
-│      ├─ variables.tf
-│      ├─ main.tf
-│      ├─ outputs.tf
-│      └─ terraform.tfvars
-├─ .gitignore
-└─ README.md
-
+![alt text](image.png)
 ---
 
 Initializing the terraform backend : 
