@@ -1,6 +1,42 @@
 # terraform
 Proof of work for terraform  
 
+Description : 
+This is a small passion project to explore the tool : Terraform
+The goal of this project is to use the 3-tier architure and alloate resources in each tier : 
+1. Network
+2. Database
+3. Compute
+
+Each resource allocates multiple cloud resources through terraform scripts, some of them are : 
+azurerm_virtual_network
+azurerm_subnet (public)
+azurerm_subnet (private)
+azurerm_network_security_group (public)
+azurerm_network_security_group (private)
+azurerm_subnet_network_security_group_association (public)
+azurerm_subnet_network_security_group_association (private)
+azurerm_public_ip (nat_gateway_ip)
+azurerm_nat_gateway
+azurerm_nat_gateway_public_ip_association
+azurerm_subnet_nat_gateway_association
+azurerm_linux_virtual_machine_scale_set
+azurerm_network_interface (within VMSS)
+azurerm_public_ip (for compute/LB)
+azurerm_lb
+azurerm_lb_backend_address_pool
+azurerm_lb_probe
+azurerm_lb_rule
+azurerm_postgresql_flexible_server
+azurerm_postgresql_flexible_server_firewall_rule
+
+if it wasnt obvious, yes im using azure as the cloud platoform for this project! 
+I have made notes for myself to refer later, this is purely a self journal of this half a day project, 
+read it at your own risk...
+
+--- 
+Folder structure : 
+
 ![alt text](media/image.png)
 
 ---
