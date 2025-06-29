@@ -73,3 +73,39 @@ variable "image_offer" {
 variable "image_sku" {
   type = string
 }
+
+
+
+//Database variables : 
+variable "sku_name" {
+  description = "DB SKU for PostgreSQL Flexible Server"
+  type        = string
+}
+
+variable "storage_mb" {
+  description = "DB storage in MB"
+  type        = number
+}
+
+variable "db_version" {
+  description = "PostgreSQL version"
+  type        = string
+}
+
+variable "administrator_login" {
+  description = "DB admin username"
+  type        = string
+}
+
+variable "db_admin_password" {
+  description = "DB admin password"
+  type        = string
+  sensitive   = true
+}
+
+variable "administrator_password" {
+  description = "Admin password for the PostgreSQL flexible server"
+  type        = string
+  sensitive   = true
+}
+

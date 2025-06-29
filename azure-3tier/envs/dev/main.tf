@@ -13,6 +13,7 @@ module "network" {
 }
 
 
+//Tier - 2 Compute : This module provisions the compute resources such as virtual machines
 module "compute" {
   source        = "../../modules/compute"
   resource_group = var.resource_group
@@ -30,3 +31,24 @@ module "compute" {
 
   tags            = var.tags
 }
+
+
+//Tier - 3 Database : This module sets up the database resources. 
+module "database" {
+  source                 = "../../modules/database"
+
+  resource_group         = var.resource_group
+  location               = var.location
+  subnet_id              = module.network.private_subnet_id
+
+  sku_name               = var.sku_name
+  storage_mb             = var.storage_mb
+  db_version             = var.db_version
+
+  administrator_login    = var.administrator_login
+  administrator_password = var.db_admin_password
+
+  tags                   = var.tags
+}
+
+
