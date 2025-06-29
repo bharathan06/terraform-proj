@@ -1,7 +1,7 @@
 # terraform
 
 Description : 
-This is a small passion project to explore the tool : Terraform
+This is a small passion project to explore the tool : Terraform. 
 The goal of this project is to use the 3-tier architure and alloate resources in each tier : 
 1. Network
 2. Database
